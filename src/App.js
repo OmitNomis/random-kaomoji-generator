@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import { kaomoji } from "./kaomoji";
 
 function App() {
   const [code, setCode] = useState("");
