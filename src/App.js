@@ -3,7 +3,7 @@ import "./App.css";
 import { kaomoji } from "./kaomoji";
 
 function App() {
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState("Click on generate to start");
 
   function handleGenerate() {
     // Generate a random index for the kaomoji array
