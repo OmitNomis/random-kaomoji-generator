@@ -6,7 +6,14 @@ function App() {
   const [code, setCode] = useState("");
 
   function handleGenerate() {
-    setCode("New code goes here...");
+    // Generate a random index for the kaomoji array
+    const randomIndex = Math.floor(Math.random() * kaomoji.length);
+
+    // Get the string at the random index in the kaomoji array
+    const randomKaomoji = kaomoji[randomIndex];
+
+    // Update the code state variable with the random kaomoji
+    setCode(randomKaomoji);
   }
 
   // This function will be called when the copy-button is clicked
