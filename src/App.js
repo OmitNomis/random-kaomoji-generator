@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   // Use the useState hook to initialize an empty string state called "code"
-  const [code, setCode] = useState("helo");
+  const [code, setCode] = useState("");
 
   return (
     <div className="App">
