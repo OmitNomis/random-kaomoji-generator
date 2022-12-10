@@ -21,6 +21,7 @@
   font-size: 20px;
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: center;
 }
 
@@ -56,6 +57,47 @@
 }
 
 .generate-button:hover:before {
+  width: 200%;
+  height: 200%;
+}
+.code-block-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.copy-button {
+  background-color: #222;
+  color: #ccc;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.copy-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.copy-button:hover {
+  box-shadow: 0 0 7px 7px rgba(255, 255, 255, 0.5);
+}
+
+.copy-button:hover:before {
   width: 200%;
   height: 200%;
 }
