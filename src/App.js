@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import { kaomoji } from "./kaomoji";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [code, setCode] = useState("Click on generate to start");
@@ -21,6 +22,7 @@ function App() {
   function handleCopy() {
     // TODO: Add code to copy the code in the code-block to the clipboard
     // Get the text inside the code-block element
+    toast("Copied to clipboard");
     const codeText = document.querySelector(".code-block p").textContent;
 
     // Create a hidden textarea element to hold the text
@@ -38,7 +40,6 @@ function App() {
 
     // Use the execCommand method to copy the text to the clipboard
     document.execCommand("copy");
-    toast("Copied to clipboard");
 
     // Remove the textarea from the document
     document.body.removeChild(textarea);
@@ -46,6 +47,18 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer
+        position="bottom-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover={false}
+        theme="dark"
+      />
       <div className="code-block">
         {/* Add the copy-button to the top right of the code-block */}
         <div className="code-block-header">
