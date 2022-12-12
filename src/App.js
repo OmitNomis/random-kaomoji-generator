@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { kaomoji } from "./kaomoji";
+import { toast } from "react-toastify";
 
 function App() {
   const [code, setCode] = useState("Click on generate to start");
@@ -37,6 +38,7 @@ function App() {
 
     // Use the execCommand method to copy the text to the clipboard
     document.execCommand("copy");
+    toast("Copied to clipboard");
 
     // Remove the textarea from the document
     document.body.removeChild(textarea);
