@@ -10,7 +10,7 @@
 
 .code-block {
   background-color: #222;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #ccc;
   min-width: 300px;
   height: 150px;
@@ -27,6 +27,7 @@
   background-color: #ff4400;
   border: none;
   color: #fff;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 24px;
   width: 300px;
