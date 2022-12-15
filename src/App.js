@@ -47,9 +47,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1 style={{ fontFamily: "Rubik Vinyl", marginBottom: 100 }}>
-        Random Kaomoji
-      </h1>
+      <h1 style={{ fontFamily: "Rubik Vinyl" }}>Random Kaomoji</h1>
+      <br />
+      <br />
+      <br />
+      <br />
 
       <ToastContainer
         position="bottom-center"
